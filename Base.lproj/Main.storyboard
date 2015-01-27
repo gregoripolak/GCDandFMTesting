@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="P7b-P9-FQv">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Testing View Controller-->
+        <scene sceneID="za0-rI-Gdv">
+            <objects>
+                <viewController id="P7b-P9-FQv" customClass="TestingViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="fz2-UD-4Ox"/>
+                        <viewControllerLayoutGuide type="bottom" id="wpV-6s-XWu"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="EUP-HD-Tgy">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e25-Ki-8tB">
+                                <rect key="frame" x="93" y="28" width="414" height="30"/>
+                                <color key="backgroundColor" red="0.95399305560000003" green="0.95399305560000003" blue="0.95399305560000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Start download and wait">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="downloadButtonPressed:" destination="P7b-P9-FQv" eventType="touchUpInside" id="BoY-oC-b7R"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kkQ-i4-pSH">
+                                <rect key="frame" x="16" y="104" width="568" height="476"/>
+                                <color key="backgroundColor" red="0.95399305560000003" green="0.95399305560000003" blue="0.95399305560000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rOh-w2-0fL">
+                                <rect key="frame" x="93" y="66" width="414" height="30"/>
+                                <color key="backgroundColor" red="0.95399305560000003" green="0.95399305560000003" blue="0.95399305560000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Present random path">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="presentFilePathButton:" destination="P7b-P9-FQv" eventType="touchUpInside" id="azu-si-6hs"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="kkQ-i4-pSH" secondAttribute="bottom" constant="20" symbolic="YES" id="4DR-Th-Utt"/>
+                            <constraint firstItem="kkQ-i4-pSH" firstAttribute="top" secondItem="rOh-w2-0fL" secondAttribute="bottom" constant="8" symbolic="YES" id="DDi-U7-WND"/>
+                            <constraint firstItem="rOh-w2-0fL" firstAttribute="trailing" secondItem="e25-Ki-8tB" secondAttribute="trailing" id="HyM-Pi-Oin"/>
+                            <constraint firstItem="e25-Ki-8tB" firstAttribute="leading" secondItem="rOh-w2-0fL" secondAttribute="leading" id="RbY-ex-6rK"/>
+                            <constraint firstItem="rOh-w2-0fL" firstAttribute="top" secondItem="e25-Ki-8tB" secondAttribute="bottom" constant="8" symbolic="YES" id="S9e-Yh-8jw"/>
+                            <constraint firstItem="kkQ-i4-pSH" firstAttribute="trailing" secondItem="EUP-HD-Tgy" secondAttribute="trailingMargin" id="VwJ-Fk-vze"/>
+                            <constraint firstItem="kkQ-i4-pSH" firstAttribute="leading" secondItem="EUP-HD-Tgy" secondAttribute="leadingMargin" id="q8k-CM-cD2"/>
+                            <constraint firstItem="e25-Ki-8tB" firstAttribute="top" secondItem="fz2-UD-4Ox" secondAttribute="bottom" constant="8" symbolic="YES" id="sEG-h3-cEq"/>
+                            <constraint firstItem="rOh-w2-0fL" firstAttribute="centerX" secondItem="kkQ-i4-pSH" secondAttribute="centerX" id="sXp-62-oIJ"/>
+                            <constraint firstItem="e25-Ki-8tB" firstAttribute="leading" secondItem="EUP-HD-Tgy" secondAttribute="leadingMargin" constant="77" id="xXw-hJ-mss"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="showPathButton" destination="rOh-w2-0fL" id="jTh-v2-511"/>
+                        <outlet property="startDownloadAndWaitButton" destination="e25-Ki-8tB" id="xt5-TH-dNc"/>
+                        <outlet property="textView" destination="kkQ-i4-pSH" id="IEQ-6g-3TB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1V1-xc-cVT" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="509" y="349"/>
+        </scene>
+    </scenes>
+</document>

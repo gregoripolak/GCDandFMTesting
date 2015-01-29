@@ -7,17 +7,9 @@
 //
 
 #include "TestingViewController.h"
-#include <CommonCrypto/CommonDigest.h>
-#define OFFLINE_EXTENSION ".offline"
 
 @interface TestingViewController ()
 
-// Logic proprties
-@property (strong, nonatomic) NSMutableDictionary *URLtoFileDictionary;
-@property (strong, nonatomic) NSArray *arrayOfUrls;
-// Dispatch contentDispatchGroup
-@property (strong, nonatomic) dispatch_queue_t contentDispatchQueue;
-@property (strong, nonatomic) dispatch_group_t contentDispatchGroup;
 // UI Proprties
 @property (weak, nonatomic) IBOutlet UITextView *textView;
 @property (weak, nonatomic) IBOutlet UIButton *startDownloadAndWaitButton;

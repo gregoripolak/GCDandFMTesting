@@ -1,70 +1,112 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="P7b-P9-FQv">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="8aD-mh-aTx">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--Testing View Controller-->
-        <scene sceneID="za0-rI-Gdv">
+        <!--Downloader-->
+        <scene sceneID="FH7-iy-dFp">
             <objects>
-                <viewController id="P7b-P9-FQv" customClass="TestingViewController" sceneMemberID="viewController">
+                <viewController title="Downloader" id="8aD-mh-aTx" customClass="ContentDownloadViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="fz2-UD-4Ox"/>
-                        <viewControllerLayoutGuide type="bottom" id="wpV-6s-XWu"/>
+                        <viewControllerLayoutGuide type="top" id="w2U-pb-OjR"/>
+                        <viewControllerLayoutGuide type="bottom" id="oYZ-Ot-kEm"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="EUP-HD-Tgy">
+                    <view key="view" contentMode="scaleToFill" id="R38-6j-OfK">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e25-Ki-8tB">
-                                <rect key="frame" x="93" y="28" width="414" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K2j-YI-Frn">
+                                <rect key="frame" x="16" y="20" width="414" height="68"/>
                                 <color key="backgroundColor" red="0.95399305560000003" green="0.95399305560000003" blue="0.95399305560000003" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="Start download and wait">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="68" id="OXc-3I-ZoY"/>
+                                </constraints>
+                                <state key="normal" title="Start download">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="downloadButtonPressed:" destination="P7b-P9-FQv" eventType="touchUpInside" id="BoY-oC-b7R"/>
+                                    <action selector="downloadButtonPressed:" destination="8aD-mh-aTx" eventType="touchUpInside" id="zH1-KY-Nf5"/>
                                 </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kkQ-i4-pSH">
-                                <rect key="frame" x="16" y="104" width="568" height="476"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zUj-SG-mWB">
+                                <rect key="frame" x="16" y="177" width="568" height="403"/>
                                 <color key="backgroundColor" red="0.95399305560000003" green="0.95399305560000003" blue="0.95399305560000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rOh-w2-0fL">
-                                <rect key="frame" x="93" y="66" width="414" height="30"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No Downloads." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uSN-sc-1tr">
+                                <rect key="frame" x="438" y="20" width="146" height="68"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="146" id="i61-ji-0Ve"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p7a-MJ-AGh">
+                                <rect key="frame" x="438" y="96" width="146" height="68"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="msP-6m-qac">
+                                <rect key="frame" x="16" y="96" width="414" height="30"/>
+                                <color key="backgroundColor" red="0.95399305560000003" green="0.95399305560000003" blue="0.95399305560000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Wait">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="downloadButtonPressed:" destination="8aD-mh-aTx" eventType="touchUpInside" id="j3G-PF-Q9B"/>
+                                    <action selector="waitButton:" destination="8aD-mh-aTx" eventType="touchUpInside" id="RD2-KN-M64"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3n1-GC-aiv">
+                                <rect key="frame" x="16" y="134" width="414" height="30"/>
                                 <color key="backgroundColor" red="0.95399305560000003" green="0.95399305560000003" blue="0.95399305560000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Present random path">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="presentFilePathButton:" destination="P7b-P9-FQv" eventType="touchUpInside" id="azu-si-6hs"/>
+                                    <action selector="presentFilePathButton:" destination="8aD-mh-aTx" eventType="touchUpInside" id="89W-ar-9IN"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="kkQ-i4-pSH" secondAttribute="bottom" constant="20" symbolic="YES" id="4DR-Th-Utt"/>
-                            <constraint firstItem="kkQ-i4-pSH" firstAttribute="top" secondItem="rOh-w2-0fL" secondAttribute="bottom" constant="8" symbolic="YES" id="DDi-U7-WND"/>
-                            <constraint firstItem="rOh-w2-0fL" firstAttribute="trailing" secondItem="e25-Ki-8tB" secondAttribute="trailing" id="HyM-Pi-Oin"/>
-                            <constraint firstItem="e25-Ki-8tB" firstAttribute="leading" secondItem="rOh-w2-0fL" secondAttribute="leading" id="RbY-ex-6rK"/>
-                            <constraint firstItem="rOh-w2-0fL" firstAttribute="top" secondItem="e25-Ki-8tB" secondAttribute="bottom" constant="8" symbolic="YES" id="S9e-Yh-8jw"/>
-                            <constraint firstItem="kkQ-i4-pSH" firstAttribute="trailing" secondItem="EUP-HD-Tgy" secondAttribute="trailingMargin" id="VwJ-Fk-vze"/>
-                            <constraint firstItem="kkQ-i4-pSH" firstAttribute="leading" secondItem="EUP-HD-Tgy" secondAttribute="leadingMargin" id="q8k-CM-cD2"/>
-                            <constraint firstItem="e25-Ki-8tB" firstAttribute="top" secondItem="fz2-UD-4Ox" secondAttribute="bottom" constant="8" symbolic="YES" id="sEG-h3-cEq"/>
-                            <constraint firstItem="rOh-w2-0fL" firstAttribute="centerX" secondItem="kkQ-i4-pSH" secondAttribute="centerX" id="sXp-62-oIJ"/>
-                            <constraint firstItem="e25-Ki-8tB" firstAttribute="leading" secondItem="EUP-HD-Tgy" secondAttribute="leadingMargin" constant="77" id="xXw-hJ-mss"/>
+                            <constraint firstItem="3n1-GC-aiv" firstAttribute="top" secondItem="msP-6m-qac" secondAttribute="bottom" constant="8" symbolic="YES" id="1zJ-Kw-MXT"/>
+                            <constraint firstAttribute="bottom" secondItem="zUj-SG-mWB" secondAttribute="bottom" constant="20" symbolic="YES" id="3Zu-uP-ukC"/>
+                            <constraint firstItem="uSN-sc-1tr" firstAttribute="leading" secondItem="K2j-YI-Frn" secondAttribute="trailing" constant="8" symbolic="YES" id="Jf7-JO-Jb4"/>
+                            <constraint firstItem="zUj-SG-mWB" firstAttribute="leading" secondItem="R38-6j-OfK" secondAttribute="leadingMargin" id="MEH-Av-qUv"/>
+                            <constraint firstItem="zUj-SG-mWB" firstAttribute="leading" secondItem="3n1-GC-aiv" secondAttribute="leading" id="PDg-Q8-wRT"/>
+                            <constraint firstItem="msP-6m-qac" firstAttribute="top" secondItem="K2j-YI-Frn" secondAttribute="bottom" constant="8" symbolic="YES" id="Sv1-zH-W3v"/>
+                            <constraint firstItem="msP-6m-qac" firstAttribute="top" secondItem="p7a-MJ-AGh" secondAttribute="top" id="TXe-Fg-K8i"/>
+                            <constraint firstItem="p7a-MJ-AGh" firstAttribute="leading" secondItem="3n1-GC-aiv" secondAttribute="trailing" constant="8" symbolic="YES" id="Z3R-aZ-GRi"/>
+                            <constraint firstItem="p7a-MJ-AGh" firstAttribute="leading" secondItem="msP-6m-qac" secondAttribute="trailing" constant="8" symbolic="YES" id="ZT4-8Q-TrV"/>
+                            <constraint firstItem="p7a-MJ-AGh" firstAttribute="trailing" secondItem="uSN-sc-1tr" secondAttribute="trailing" id="Zf2-8v-kRc"/>
+                            <constraint firstItem="p7a-MJ-AGh" firstAttribute="top" secondItem="uSN-sc-1tr" secondAttribute="bottom" constant="8" symbolic="YES" id="cDB-MG-1Oj"/>
+                            <constraint firstItem="p7a-MJ-AGh" firstAttribute="bottom" secondItem="3n1-GC-aiv" secondAttribute="bottom" id="cnD-Fe-OIt"/>
+                            <constraint firstItem="uSN-sc-1tr" firstAttribute="top" secondItem="w2U-pb-OjR" secondAttribute="bottom" id="fUh-I6-Pww"/>
+                            <constraint firstItem="p7a-MJ-AGh" firstAttribute="trailing" secondItem="R38-6j-OfK" secondAttribute="trailingMargin" id="ilH-mx-CNq"/>
+                            <constraint firstItem="zUj-SG-mWB" firstAttribute="top" secondItem="3n1-GC-aiv" secondAttribute="bottom" constant="13" id="jvc-wM-kZO"/>
+                            <constraint firstItem="3n1-GC-aiv" firstAttribute="leading" secondItem="msP-6m-qac" secondAttribute="leading" id="m8c-Ta-NAJ"/>
+                            <constraint firstItem="uSN-sc-1tr" firstAttribute="leading" secondItem="p7a-MJ-AGh" secondAttribute="leading" id="nQS-qB-2P9"/>
+                            <constraint firstItem="p7a-MJ-AGh" firstAttribute="trailing" secondItem="zUj-SG-mWB" secondAttribute="trailing" id="rQd-aP-mAU"/>
+                            <constraint firstItem="uSN-sc-1tr" firstAttribute="top" secondItem="K2j-YI-Frn" secondAttribute="top" id="rsI-Op-17P"/>
+                            <constraint firstItem="msP-6m-qac" firstAttribute="leading" secondItem="K2j-YI-Frn" secondAttribute="leading" id="tzP-5A-JpI"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="showPathButton" destination="rOh-w2-0fL" id="jTh-v2-511"/>
-                        <outlet property="startDownloadAndWaitButton" destination="e25-Ki-8tB" id="xt5-TH-dNc"/>
-                        <outlet property="textView" destination="kkQ-i4-pSH" id="IEQ-6g-3TB"/>
+                        <outlet property="downloadsCompletedLabel" destination="p7a-MJ-AGh" id="cEN-I5-vKi"/>
+                        <outlet property="downloadsInSessionNumberLabel" destination="uSN-sc-1tr" id="rPV-cf-g3q"/>
+                        <outlet property="showPathButton" destination="3n1-GC-aiv" id="Xuf-8e-i7z"/>
+                        <outlet property="startDownloadAndWaitButton" destination="K2j-YI-Frn" id="Kzp-jp-zSv"/>
+                        <outlet property="textView" destination="zUj-SG-mWB" id="h1k-5C-pfw"/>
+                        <outlet property="waitWhileRunning" destination="msP-6m-qac" id="6Ce-x3-eh3"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="1V1-xc-cVT" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qpK-Cb-6Rq" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="509" y="349"/>
         </scene>

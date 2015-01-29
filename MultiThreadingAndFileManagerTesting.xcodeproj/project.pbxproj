@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0A4A5A961A79C6A800C1B0FF /* ContentDownloadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A4A5A951A79C6A800C1B0FF /* ContentDownloadViewController.m */; };
 		0A4D3C6F1A7819F50084ABE4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A4D3C6E1A7819F50084ABE4 /* main.m */; };
 		0A4D3C721A7819F50084ABE4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A4D3C711A7819F50084ABE4 /* AppDelegate.m */; };
 		0A4D3C781A7819F50084ABE4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A4D3C761A7819F50084ABE4 /* Main.storyboard */; };
@@ -15,6 +14,7 @@
 		0A4D3C7D1A7819F50084ABE4 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A4D3C7B1A7819F50084ABE4 /* LaunchScreen.xib */; };
 		0A4D3C891A7819F50084ABE4 /* MultiThreadingAndFileManagerTestingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A4D3C881A7819F50084ABE4 /* MultiThreadingAndFileManagerTestingTests.m */; };
 		0A8D02B31A79D09D003DA0B0 /* URLContentDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A8D02B21A79D09D003DA0B0 /* URLContentDownloader.m */; };
+		0AD62B4C1A79D1BB00B3B56B /* ContentDownloadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AD62B4B1A79D1BB00B3B56B /* ContentDownloadViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,8 +28,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0A4A5A941A79C6A800C1B0FF /* ContentDownloadViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContentDownloadViewController.h; sourceTree = "<group>"; };
-		0A4A5A951A79C6A800C1B0FF /* ContentDownloadViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContentDownloadViewController.m; sourceTree = "<group>"; };
 		0A4A5A971A79C6E800C1B0FF /* NotifcationCenterNames.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NotifcationCenterNames.h; sourceTree = "<group>"; };
 		0A4D3C691A7819F50084ABE4 /* MultiThreadingAndFileManagerTesting.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MultiThreadingAndFileManagerTesting.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A4D3C6D1A7819F50084ABE4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -44,6 +42,8 @@
 		0A4D3C881A7819F50084ABE4 /* MultiThreadingAndFileManagerTestingTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MultiThreadingAndFileManagerTestingTests.m; sourceTree = "<group>"; };
 		0A8D02B11A79D09D003DA0B0 /* URLContentDownloader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = URLContentDownloader.h; path = Model/URLContentDownloader.h; sourceTree = "<group>"; };
 		0A8D02B21A79D09D003DA0B0 /* URLContentDownloader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = URLContentDownloader.m; path = Model/URLContentDownloader.m; sourceTree = "<group>"; };
+		0AD62B4A1A79D1BB00B3B56B /* ContentDownloadViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ContentDownloadViewController.h; path = VC/ContentDownloadViewController.h; sourceTree = "<group>"; };
+		0AD62B4B1A79D1BB00B3B56B /* ContentDownloadViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ContentDownloadViewController.m; path = VC/ContentDownloadViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,8 +76,8 @@
 		0A4A5A861A793A5400C1B0FF /* VC */ = {
 			isa = PBXGroup;
 			children = (
-				0A4A5A941A79C6A800C1B0FF /* ContentDownloadViewController.h */,
-				0A4A5A951A79C6A800C1B0FF /* ContentDownloadViewController.m */,
+				0AD62B4A1A79D1BB00B3B56B /* ContentDownloadViewController.h */,
+				0AD62B4B1A79D1BB00B3B56B /* ContentDownloadViewController.m */,
 			);
 			name = VC;
 			sourceTree = "<group>";
@@ -242,8 +242,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0A4A5A961A79C6A800C1B0FF /* ContentDownloadViewController.m in Sources */,
 				0A4D3C721A7819F50084ABE4 /* AppDelegate.m in Sources */,
+				0AD62B4C1A79D1BB00B3B56B /* ContentDownloadViewController.m in Sources */,
 				0A8D02B31A79D09D003DA0B0 /* URLContentDownloader.m in Sources */,
 				0A4D3C6F1A7819F50084ABE4 /* main.m in Sources */,
 			);
